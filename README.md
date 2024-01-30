@@ -1,4 +1,8 @@
-# WebConf24
+## Exploiting Spatial & Semantic Contexts through Embeddings for Geo-Entity Typing
+### KDD 2024 Research Track (Submission #897)
+__TL;DR:__ approach for embedding geo-referenced vector data, combining geometric, spatial, and semantic neighborhood contexts, for inferring geo-entity properties
+
+__
 
 #### Install requirements:
 ```commandline
