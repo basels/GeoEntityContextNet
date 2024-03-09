@@ -1,0 +1,241 @@
+{
+  "name": "0",
+  "children": [
+    {
+      "name": "amenity",
+      "children": [
+        {
+          "name": "eating_and_drinking",
+          "children": [
+            {"name": "fast_food", "children": []},
+            {"name": "restaurant", "children": []}
+          ]
+        },
+        {
+          "name": "education",
+          "children": [
+            {"name": "college", "children": []},
+            {"name": "school__amenity", "children": []},
+            {"name": "school__building", "children": []},
+            {"name": "university", "children": []}
+          ]
+        },
+        {"name": "parking", "children": []},
+        {"name": "place_of_worship", "children": []}
+      ]
+    },
+    {
+      "name": "building",
+      "children": [
+        {
+          "name": "commercial_building",
+          "children": [
+            {"name": "commercial__building", "children": []},
+            {"name": "retail__building", "children": []}
+          ]
+        },
+        {
+          "name": "residential_building",
+          "children": [
+            {"name": "apartments", "children": []},
+            {"name": "residential__building", "children": []}
+          ]
+        },
+        {
+          "name": "industrial_building",
+          "children": [
+            {"name": "industrial__building", "children": []},
+            {"name": "warehouse", "children": []}
+          ]
+        },
+        {
+          "name": "health_building",
+          "children": [
+            {"name": "hospital", "children": []}
+          ]
+        },
+        {"name": "hotel", "children": []},
+        {"name": "house", "children": []},
+        {"name": "office", "children": []},
+        {"name": "roof", "children": []}
+      ]
+    },
+    {
+      "name": "highway",
+      "children": [
+        {
+          "name": "pedestrian_paths",
+          "children": [
+            {
+              "name": "footway",
+              "children": [
+                {"name": "sidewalk", "children": []}
+              ]
+            },
+            {"name": "pedestrian", "children": []}
+          ]
+        },
+        {
+          "name": "cycle_paths",
+          "children": [
+            {"name": "cycleway", "children": []}
+          ]
+        },
+        {
+          "name": "roads",
+          "children": [
+            {"name": "motorway", "children": []},
+            {"name": "primary", "children": []},
+            {"name": "residential__highway", "children": []},
+            {"name": "secondary", "children": []},
+            {"name": "tertiary", "children": []},
+            {"name": "trunk", "children": []}
+          ]
+        },
+        {
+          "name": "service_details",
+          "children": [
+            {"name": "alley", "children": []},
+            {"name": "driveway", "children": []},
+            {"name": "parking_aisle", "children": []}
+          ]
+        },
+        {"name": "motorway_link", "children": []},
+        {"name": "path", "children": []},
+        {"name": "track__highway", "children": []}
+      ]
+    },
+    {
+      "name": "landuse",
+      "children": [
+        {
+          "name": "agricultural_landuse",
+          "children": [
+            {"name": "farm", "children": []},
+            {"name": "farmland", "children": []},
+            {"name": "farmyard", "children": []}
+          ]
+        },
+        {
+          "name": "commercial_landuse",
+          "children": [
+            {"name": "commercial__landuse", "children": []},
+            {"name": "retail__landuse", "children": []}
+          ]
+        },
+        {
+          "name": "residential_landuse",
+          "children": [
+            {"name": "residential__landuse", "children": []}
+          ]
+        },
+        {
+          "name": "industrial_landuse",
+          "children": [
+            {"name": "industrial__landuse", "children": []}
+          ]
+        },
+        {
+          "name": "natural_landuse",
+          "children": [
+            {"name": "forest", "children": []},
+            {"name": "grass", "children": []},
+            {"name": "meadow", "children": []},
+            {"name": "orchard", "children": []},
+            {"name": "vineyard", "children": []}
+          ]
+        },
+        {"name": "cemetery", "children": []}
+      ]
+    },
+    {
+      "name": "leisure",
+      "children": [
+        {
+          "name": "sports_leisure",
+          "children": [
+            {"name": "golf_course", "children": []},
+            {"name": "pitch", "children": []},
+            {"name": "track__leisure", "children": []}
+          ]
+        },
+        {
+          "name": "outdoor_leisure",
+          "children": [
+            {"name": "garden", "children": []},
+            {"name": "nature_reserve", "children": []},
+            {"name": "park", "children": []},
+            {"name": "playground", "children": []}
+          ]
+        },
+        {"name": "swimming_pool", "children": []}
+      ]
+    },
+    {
+      "name": "man_made",
+      "children": [
+        {"name": "storage_tank", "children": []}
+      ]
+    },
+    {
+      "name": "natural",
+      "children": [
+        {
+          "name": "terrestrial",
+          "children": [
+            {"name": "bare_rock", "children": []},
+            {"name": "beach", "children": []},
+            {"name": "coastline", "children": []},
+            {"name": "grassland", "children": []},
+            {"name": "heath", "children": []},
+            {"name": "sand", "children": []},
+            {"name": "scrub", "children": []},
+            {"name": "wood", "children": []}
+          ]
+        },
+        {
+          "name": "aquatic",
+          "children": [
+            {
+              "name": "water",
+              "children": [
+                {"name": "basin", "children": []},
+                {"name": "lake", "children": []},
+                {"name": "pond", "children": []},
+                {"name": "reservoir", "children": []},
+                {"name": "river__water", "children": []}
+              ]
+            },
+            {
+              "name": "wetland",
+              "children": [
+                {"name": "marsh", "children": []}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "railway",
+      "children": [
+        {"name": "light_rail", "children": []},
+        {"name": "rail", "children": []}
+      ]
+    },
+    {
+      "name": "waterway",
+      "children": [
+        {
+          "name": "river_waterway",
+          "children": [
+            {"name": "river__waterway", "children": []}
+          ]
+        },
+        {"name": "ditch", "children": []},
+        {"name": "drain", "children": []},
+        {"name": "stream", "children": []}
+      ]
+    }
+  ]
+}

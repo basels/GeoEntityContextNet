@@ -3,7 +3,9 @@ from osm_models import *
 
 import argparse
 import pandas as pd
+import numpy as np
 import json
+from datetime import datetime
 import warnings
 
 SEED = 42
@@ -13,14 +15,6 @@ warnings.filterwarnings("ignore")
 tqdm.pandas()
 
 # ------- train script utils ---------
-
-
-def load_data(train_fname, taxo_tree_fname):
-    train_df = pd.read_parquet(train_fname)
-    with open(taxo_tree_fname, "r") as f:
-        tree_dict = json.load(f)
-    return train_df, tree_dict
-
 
 def setup_tree_and_encoder(train_df, tree_dict):
     taxo_embedding_tree = Tree()
@@ -88,8 +82,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train Geo-Embedding model.")
-    parser.add_argument("--train_fname", type=str, default='data/df_big200k.parquet', help="Training data file name.")
-    parser.add_argument("--taxo_tree_fname", type=str, default='data/taxo_tree_embedding.json', help="Taxonomy tree json file name.")
+    parser.add_argument("--train_fname", type=str, help="Training data file name.", required=True)
+    parser.add_argument("--taxo_tree_fname", type=str, default='data/taxo_tree.json', help="Taxonomy tree json file name.")
     parser.add_argument("--imgs_dir", type=str, default='data/train/img/', help="Training shape images path location.")
     parser.add_argument("--epochs", type=str, default='10', help="Number of epochs to train for.")
     parser.add_argument("--output", type=str, default='geoemb_model.pkl', help="Model output filename.")

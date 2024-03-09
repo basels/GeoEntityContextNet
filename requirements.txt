@@ -9,14 +9,11 @@ matplotlib
 tqdm
 treelib
 lxml
-sklearn
-ipywidgets
 scikit-learn
 pytorch-metric-learning
 torchviz
 graphviz
 pyarrow
 jupyter
-osmnx
-Wikidata
 transformers
+git+https://github.com/basels/osm-taxonomy/

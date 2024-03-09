@@ -10,7 +10,20 @@ pip3 install -r requirements.txt
 ```
 
 ### Preprocess the data
-_TBD_
+```commandline
+usage: preprocess_data.py [-h] --input_osm INPUT_OSM [--output_dir OUTPUT_DIR] [--output_file OUTPUT_FILE]
+
+Pre-process the OSM data for the training of Geo-Embedding model.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input_osm INPUT_OSM
+                        OSM dump (xml) input filename.
+  --output_dir OUTPUT_DIR
+                        Output OSM images directory path.
+  --output_file OUTPUT_FILE
+                        output filename (used for the training script).
+```
 
 ### Train the model
 ```commandline
