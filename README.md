@@ -25,9 +25,9 @@ optional arguments:
                         output filename (used for the training script).
 ```
 
-### Train the model
+### Train and evaluate the model
 ```commandline
-usage: train_model.py [-h] [--train_fname TRAIN_FNAME] [--taxo_tree_fname TAXO_TREE_FNAME] [--imgs_dir IMGS_DIR] [--epochs EPOCHS]
+usage: train_model.py [-h] --train_fname TRAIN_FNAME [--taxo_tree_fname TAXO_TREE_FNAME] [--imgs_dir IMGS_DIR] [--epochs EPOCHS] [--eval_fname EVAL_FNAME] [--output OUTPUT]
 
 Train Geo-Embedding model.
 
@@ -39,11 +39,11 @@ optional arguments:
                         Taxonomy tree json file name.
   --imgs_dir IMGS_DIR   Training shape images path location.
   --epochs EPOCHS       Number of epochs to train for.
+  --eval_fname EVAL_FNAME
+                        [Optional] if provided, will run evaluation, this arg is the evaluation file name (see example).
   --output OUTPUT       Model output filename.
 ```
 
-### Evaluate
-_TBD_
 
 #### Cite this work
 _TBD_

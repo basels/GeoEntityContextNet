@@ -267,3 +267,53 @@ class OSMShapeSpatialNeighborhoodContrastive(nn.Module):
         # Generating the final embedding
         embedding = self.embedding_layer(x)
         return embedding
+
+
+# ---------- eval -----------
+
+
+def get_classification_accuracy(model, train_dataloader, test_dataloader, device):
+    """
+    Compute the classification accuracy using embeddings from a model and a RandomForest classifier.
+
+    Parameters:
+    - model: A trained model that produces embeddings.
+    - train_dataloader: Dataloader for the training data.
+    - test_dataloader: Dataloader for the test data.
+    - device: Device (e.g., 'cuda' or 'cpu') on which the model and data should be loaded.
+
+    Returns:
+    - float: Classification accuracy on the test data.
+    """
+    
+    # Extract embeddings from the model for both training and test data
+    X_train, y_train = extract_embeddings(model, train_dataloader, device)
+    X_test, y_test = extract_embeddings(model, test_dataloader, device)
+    # Convert embeddings and labels to appropriate data types for the classifier
+    X_train, y_train = X_train.float(), y_train.long()
+    X_test, y_test = X_test.float(), y_test.long()
+
+    X_all = np.concatenate((X_train, X_test), axis=0)
+    y_all = np.concatenate((y_train, y_test), axis=0)
+
+    kf = KFold(n_splits=10, shuffle=True, random_state=SEED)
+    c_model = SVC()
+
+    all_predicted, all_true = [], []
+
+    for train_index, test_index in kf.split(X_all):
+        X_train_kf, X_test_kf = X_all[train_index], X_all[test_index]
+        y_train_kf, y_test_kf = y_all[train_index], y_all[test_index]
+        
+        # Ensure the data is in the correct type
+        X_train_kf, y_train_kf = X_train_kf.astype(np.float32), y_train_kf.astype(np.int64)
+        X_test_kf, y_test_kf = X_test_kf.astype(np.float32), y_test_kf.astype(np.int64)
+        
+        c_model.fit(X_train_kf, y_train_kf)
+        predicted_kf = c_model.predict(X_test_kf)
+        
+        all_predicted.extend(predicted_kf)
+        all_true.extend(y_test_kf)
+
+    # Compute and return the accuracy
+    return accuracy_score(all_true, all_predicted)
