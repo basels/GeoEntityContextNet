@@ -1,5 +1,5 @@
 ## Exploiting Spatial & Semantic Contexts through Embeddings for Geo-Entity Typing
-### ISWC 2024 Research Track Submission
+### 2024 IEEE International Conference on Big Data - Research Track Submission
 __TL;DR:__ embedding geo-referenced vector data, combining geometric, spatial, and semantic neighborhood contexts, for inferring geo-entity types in OSM & Wikidata.
 
 __
