@@ -1,5 +1,5 @@
-## Exploiting Spatial & Semantic Contexts through Embeddings for Geo-Entity Typing
-### 2024 IEEE International Conference on Big Data - Research Track Submission
+## Embedding Spatial & Semantic Contexts for Geo-Entity Typing in Smart City Apps
+### Submitted to the 11th International Smart City Workshop, co-located with the 2025 ACM Web Conference (WWW'25)
 __TL;DR:__ embedding geo-referenced vector data, combining geometric, spatial, and semantic neighborhood contexts, for inferring geo-entity types in OSM & Wikidata.
 
 __
